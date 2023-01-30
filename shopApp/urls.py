@@ -14,6 +14,7 @@ urlpatterns = [
 
 
     path('enter/', views.Enter.as_view(), name="enter"),
-    path('enter/users/', profile, name='users')
+    path('enter/users/', profile, name='users'),
+    path('thanks', views.thanks_page, name='thanks')
 
 ]

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>{{ name }} Поздравляем! Вы вошли!</h1>
+
+<div class="mb-4 bg-light rounded-3">
+     <div class="container-fluid py-3 text-center">
+     <h1 class="display-5 fw-bold">=== Добро пожаловать в "Не магазин" === {{ request.users.username }}</h1>
+    <h4 class="text-center">Здесь вы можете обменивать тикеты для того, чтобы приобретать товары</h4>
+
+    <p>{{ extra }}</p>
+     </div>
+</div>
+
+
+
+<div class="col-sm-4 offset-md-1 py-4">
+          <h4 class="text-center">Для взаимодействия используйте команды:</h4>
+          <ul class="list-unstyled">
+            <li><a href="{% url 'products' %}" class="text-white">Товары</a></li>
+            <li><a href="{#  #}" class="text-white">Купить</a></li>
+            <li><a href="{% url 'users' %}" class="text-white">Профиль</a></li>
+            <li><a href="{% url 'tickets' %}" class="text-white">Тикет</a></li>
+          </ul>
+</div>
+</body>
+</html>

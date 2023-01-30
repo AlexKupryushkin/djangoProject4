@@ -27,6 +27,20 @@ def tickets(request):
 
 
 
+# def user_page(request):
+#     object_list = O
+
+
+def thanks_page(request):
+    name = request.POST['name']
+    password = request.POST['password']
+    points = request.POST['points']
+    element = Users(username=name, password=password, points=points)
+    element.save()
+    return render(request, "./thanks_page.html",
+                  {'name': name, 'password': password, 'points': points}
+                  )
+
 
 class Enter(View):
 

@@ -6,16 +6,28 @@
 </head>
 <body>
 <h1>Пользователи</h1>
-<ul>
-    {% for u in user %}
-    <li>
-        <h2>{{ u.username }}</h2>
-        <p>{{ u.points }}</p>
+{#<ul>#}
+{#    {% for u in user %}#}
+{#    <li>#}
+{#        <h2>{{ u.username }}</h2>#}
+{#        <p>{{ u.points }}</p>#}
+{##}
+{#        <hr>#}
+{#    </li>#}
+{#    {% endfor %}#}
+{#</ul>#}
 
-        <hr>
-    </li>
-    {% endfor %}
-</ul>
+<form action="{% url 'thanks' %}" method="post">
+    {% csrf_token %}
+    <label>Имя</label>
+    <input name="name">
+    <label>Пароль</label>
+    <input name="password">
+    <label>Поинты</label>
+    <input name="points">
+
+    <button type="submit">Войти</button>
+</form>
 
 </body>
 </html>

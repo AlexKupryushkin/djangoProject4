@@ -11,7 +11,7 @@ class Users(models.Model):
 class Tickets(models.Model):
     uuid = models.CharField(max_length=36, unique=True)
     available = models.BooleanField(default=True)
-    user = models.CharField(max_length=30)
+    user_id = models.ForeignKey(Users, on_delete=models.SET_NULL, null=True)
 
 
 

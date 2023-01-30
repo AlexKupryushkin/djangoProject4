@@ -9,8 +9,9 @@
 <ul>
     {% for t in ticket %}
     <li>
-        <h2>{{ t.uuid }}</h2>
-        <p>{{ t.user }}</p>
+        <h2>{{ t.uuid }} </h2>
+        <p>{{ t.available }}</p>
+        <p>{{ t.user_id}}</p>
 
         <hr>
     </li>

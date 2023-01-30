@@ -36,7 +36,7 @@ def thanks_page(request):
     password = request.POST['password']
     points = request.POST['points']
     element = Users(username=name, password=password, points=points)
-    element.save()
+    # element.save()
     return render(request, "./thanks_page.html",
                   {'name': name, 'password': password, 'points': points}
                   )

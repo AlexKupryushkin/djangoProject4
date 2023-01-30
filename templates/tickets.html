@@ -6,16 +6,23 @@
 </head>
 <body>
 <h1>Тикеты:</h1>
+<form method="get">
 <ul>
     {% for t in ticket %}
     <li>
         <h2>{{ t.uuid }} </h2>
         <p>{{ t.available }}</p>
         <p>{{ t.user_id}}</p>
-
+    <button type="submit">{{ t.uuid }} Купить</button>
         <hr>
     </li>
     {% endfor %}
 </ul>
+
+
+
+
+</form>
+
 </body>
 </html>

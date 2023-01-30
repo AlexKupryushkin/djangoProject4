@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+
+<h1>Продукты</h1>
+
+<ul>
+    {% for p in posts %}
+    <li>
+        <h2>{{ p.name }}</h2>
+        <p>{{ p.cost }} штук</p>
+        <p>{{ p.count }} рублей</p>
+        <hr>
+    </li>
+    {% endfor %}
+</ul>
+
+</body>
+</html>

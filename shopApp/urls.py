@@ -8,13 +8,14 @@ urlpatterns = [
     path("", TemplateView.as_view(template_name="base.html")),
 
 
-    path('products/', products, name='products'),
+    path('products', products, name='products'),
 
-    path('enter/tickets/', tickets, name='tickets'),
+    path('enter/tickets', tickets, name='tickets'),
 
 
-    path('enter/', views.Enter.as_view(), name="enter"),
-    path('enter/users/', profile, name='users'),
-    path('thanks', views.thanks_page, name='thanks')
+    path('enter', views.Enter.as_view(), name="enter"),
+    path('enter/users', profile, name='users'),
+    path('thanks', views.thanks_page, name='thanks'),
+    path('exchange', views.exchange, name='exchange'),
 
 ]

@@ -9,9 +9,8 @@
 
 <div class="mb-4 bg-light rounded-3">
      <div class="container-fluid py-3 text-center">
-     <h1 class="display-5 fw-bold">{{ name }}, поздравляем! Вы вошли!</h1>
-     <h3 class="text-center">у вас {{ points }} поинтов</h3>
-         <h4 class="text-center">Здесь вы можете обменивать поинты на тикеты для того, чтобы приобретать товары</h4>
+     <h1 class="display-5 fw-bold">Вы обменяли тикет на поинты!</h1>
+    <h4 class="text-center">Вы можете приобрести товар.</h4>
 
     <p>{{ extra }}</p>
      </div>
@@ -19,10 +18,11 @@
 
 
 
+
 <div class="col-sm-4 offset-md-1 py-4">
           <h4 class="text-center">Для взаимодействия используйте команды:</h4>
           <ul class="list-unstyled">
-            <li><a href="{% url 'tickets' %}" class="text-black">Ввести тикет</a></li>
+            <li><a href="{% url 'products' %}" class="text-black">Товары</a></li>
 {#            <li><a href="{% url 'tickets' %}" class="text-black">Купить</a></li>#}
 {#            <li><a href="{% url 'users' %}" class="text-black">Профиль</a></li>#}
 {#            <li><a href="{% url 'tickets' %}" class="text-black">Тикет</a></li>#}

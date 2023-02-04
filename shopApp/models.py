@@ -2,6 +2,7 @@ from django.db import models
 import pathlib
 import uuid
 
+
 class Users(models.Model):
     username = models.CharField(max_length=30, unique=True)
     password = models.CharField(max_length=30)
@@ -9,10 +10,12 @@ class Users(models.Model):
 
 
 class Tickets(models.Model):
-    uuid = models.CharField(max_length=36, unique=True)
+    uuid = models.CharField(max_length=36)
     available = models.BooleanField(default=True)
     user_id = models.ForeignKey(Users, on_delete=models.SET_NULL, null=True)
 
+    def __str__(self):
+        return self.uuid
 
 
 class Products(models.Model):
@@ -30,8 +33,4 @@ class Orders(models.Model):
     count = models.SmallIntegerField()
     order_datetime = models.DateTimeField()
 
-
-# class Book(ProductsAbs):
-#     def get_absolute_url(self):
-#         return f"/books/"
 
